@@ -29,15 +29,15 @@
     - [x] Setup WebSocket Server (Socket.io) <!-- id: 26 -->
     - [x] Real-time File Updates (Delta Sync) <!-- id: 27 -->
     - [x] Public Share Links Implementation <!-- id: 28 -->
-- [ ] **Phase 8: Mobile Foundation (Capacitor)** <!-- id: 29 -->
-    - [ ] Capacitor Integration & Android Config <!-- id: 30 -->
-    - [ ] Responsive UI Adaptations for Mobile <!-- id: 31 -->
-    - [ ] Basic Android Permissions <!-- id: 32 -->
-- [ ] **Phase 9: Native Features & Offline** <!-- id: 33 -->
-    - [ ] Native Background Upload Plugin <!-- id: 34 -->
-    - [ ] Camera Auto-Upload Service <!-- id: 35 -->
-    - [ ] Biometric Authentication <!-- id: 36 -->
-    - [ ] Offline Caching Strategy <!-- id: 37 -->
+- [x] **Phase 8: Mobile Foundation (Capacitor)** <!-- id: 29 -->
+    - [x] Capacitor Integration & Android Config <!-- id: 30 -->
+    - [x] Responsive UI Adaptations for Mobile <!-- id: 31 -->
+    - [x] Basic Android Permissions <!-- id: 32 -->
+- [x] **Phase 9: Native Features & Offline** <!-- id: 33 -->
+    - [x] Native Background Upload Plugin <!-- id: 34 -->
+    - [x] Camera Auto-Upload Service <!-- id: 35 -->
+    - [x] Biometric Authentication <!-- id: 36 -->
+    - [x] Offline Caching Strategy <!-- id: 37 -->
 - [ ] **Phase 10: Production Polish** <!-- id: 38 -->
     - [ ] Performance Optimization (Virtual Scroll, Image resizing) <!-- id: 39 -->
     - [ ] Security Hardening (Rate limits, Headers) <!-- id: 40 -->
