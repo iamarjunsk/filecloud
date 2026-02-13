@@ -61,6 +61,7 @@ model Folder {
   parent    Folder?  @relation("FolderHierarchy", fields: [parentId], references: [id], onDelete: Cascade)
   children  Folder[] @relation("FolderHierarchy")
   files     File[]
+  shares    Share[]
 }
 
 model Share {
