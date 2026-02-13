@@ -1,0 +1,44 @@
+# Task Checklist - FileCloud
+
+- [x] **Phase 1: Infrastructure & Database Setup** <!-- id: 0 -->
+    - [x] Setup Docker Compose (PostgreSQL, Redis, MinIO) <!-- id: 1 -->
+    - [x] Initialize Node.js Express Backend <!-- id: 2 -->
+    - [x] Configure Database & Prisma ORM <!-- id: 3 -->
+- [x] **Phase 2: Authentication & User Management** <!-- id: 4 -->
+    - [x] Implement User Model & Relations <!-- id: 5 -->
+    - [x] JWT Authentication (Login/Register/Me) <!-- id: 6 -->
+    - [x] User Quota Management <!-- id: 7 -->
+- [x] **Phase 3: Core File System Backend** <!-- id: 8 -->
+    - [x] Implement File/Folder Models <!-- id: 9 -->
+    - [x] Basic Upload/Download API <!-- id: 10 -->
+    - [x] Storage Service Interface (Local/S3) <!-- id: 11 -->
+- [x] **Phase 4: Frontend Foundation** <!-- id: 12 -->
+    - [x] Setup Vue 3 + Pinia + Router <!-- id: 13 -->
+    - [x] Integrate Tailwind/UI Framework <!-- id: 14 -->
+    - [x] Implement Auth Views (Login/Register) <!-- id: 15 -->
+- [x] **Phase 5: Advanced Upload Pipeline** <!-- id: 16 -->
+    - [x] Backend: Chunked Upload APIs <!-- id: 17 -->
+    - [x] Frontend: Chunked Uploader Service <!-- id: 18 -->
+    - [x] Resumable Upload Logic <!-- id: 19 -->
+- [x] **Phase 6: File Management UI** <!-- id: 20 -->
+    - [x] File Browser Component (Grid/List) <!-- id: 21 -->
+    - [x] Folder Navigation & Breadcrumbs <!-- id: 22 -->
+    - [x] File Operations (Rename, Move, Delete) <!-- id: 23 -->
+    - [x] File Previews (Image, PDF) <!-- id: 24 -->
+- [x] **Phase 7: Real-time Sync & Sharing** <!-- id: 25 -->
+    - [x] Setup WebSocket Server (Socket.io) <!-- id: 26 -->
+    - [x] Real-time File Updates (Delta Sync) <!-- id: 27 -->
+    - [x] Public Share Links Implementation <!-- id: 28 -->
+- [ ] **Phase 8: Mobile Foundation (Capacitor)** <!-- id: 29 -->
+    - [ ] Capacitor Integration & Android Config <!-- id: 30 -->
+    - [ ] Responsive UI Adaptations for Mobile <!-- id: 31 -->
+    - [ ] Basic Android Permissions <!-- id: 32 -->
+- [ ] **Phase 9: Native Features & Offline** <!-- id: 33 -->
+    - [ ] Native Background Upload Plugin <!-- id: 34 -->
+    - [ ] Camera Auto-Upload Service <!-- id: 35 -->
+    - [ ] Biometric Authentication <!-- id: 36 -->
+    - [ ] Offline Caching Strategy <!-- id: 37 -->
+- [ ] **Phase 10: Production Polish** <!-- id: 38 -->
+    - [ ] Performance Optimization (Virtual Scroll, Image resizing) <!-- id: 39 -->
+    - [ ] Security Hardening (Rate limits, Headers) <!-- id: 40 -->
+    - [ ] Production Docker setup <!-- id: 41 -->

@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  password     String
+  name         String?
+  avatar       String?
+  quota        BigInt   @default(10737418240) // 10GB default
+  usedQuota    BigInt   @default(0)
+  isAdmin      Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  files        File[]
+  folders      Folder[]
+  shares       Share[]
+  sessions     Session[]
+}
+
+model File {
+  id           String   @id @default(uuid())
+  name         String
+  mimeType     String
+  size         BigInt
+  path         String
+  storageKey   String
+  thumbnailKey String?
+  isPublic     Boolean  @default(false)
+  isDeleted    Boolean  @default(false)
+  deletedAt    DateTime?
+  userId       String
+  folderId     String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  folder       Folder?  @relation(fields: [folderId], references: [id], onDelete: SetNull)
+  shares       Share[]
+}
+
+model Folder {
+  id        String   @id @default(uuid())
+  name      String
+  path      String
+  parentId  String?
+  userId    String
+  isDeleted Boolean  @default(false)
+  deletedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  parent    Folder?  @relation("FolderHierarchy", fields: [parentId], references: [id], onDelete: Cascade)
+  children  Folder[] @relation("FolderHierarchy")
+  files     File[]
+}
+
+model Share {
+  id        String   @id @default(uuid())
+  token     String   @unique @default(uuid())
+  expiresAt DateTime?
+  password  String?
+  userId    String
+  fileId    String?
+  folderId  String?
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  file      File?    @relation(fields: [fileId], references: [id], onDelete: Cascade)
+  folder    Folder?  @relation(fields: [folderId], references: [id], onDelete: Cascade)
+}
+
+model Session {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  expiresAt DateTime
+  userId    String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
